@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f5b317</color>
+    <color name="colorPrimaryDark">#CF9815</color>
+    <color name="colorAccent">#000000</color>
+    <color name="Splashscreen">#f5b317</color>
+    <color name="SearchHint">#000000</color>
+</resources>

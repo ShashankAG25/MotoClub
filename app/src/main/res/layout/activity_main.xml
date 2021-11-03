@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBDC93"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+            />
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/mainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+
+                <TextView
+                    android:id="@+id/repairorderID"
+                    android:layout_width="83dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="50"
+                    android:background="@color/Splashscreen"
+                    android:gravity="center|left"
+                    android:text="@string/mainenter"
+
+                    android:textColor="@color/colorAccent" />
+
+                <EditText
+                    android:id="@+id/billnumID"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="20"
+                    android:ems="10"
+
+                    android:hint="@string/bill_no"
+                    android:inputType="number" />
+
+
+                <EditText
+                    android:id="@+id/dateinID"
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="20"
+                    android:ems="10"
+                    android:hint="@string/date_in"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+
+                <EditText
+                    android:id="@+id/personnameID"
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="50"
+                    android:ems="10"
+                    android:hint="@string/owner_name"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/phonenumID"
+                    android:layout_width="19dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="50"
+                    android:ems="10"
+                    android:hint="@string/phone"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/regnumID"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:hint="@string/regnum"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/modelID"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:hint="@string/model"
+                android:importantForAutofill="no"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/odorunID"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:hint="@string/odometer_running"
+                android:importantForAutofill="no"
+                android:inputType="number" />
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+
+                    <TextView
+                        android:id="@+id/tablecol1ID"
+                        android:layout_width="231dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+
+                        android:layout_weight="70"
+                        android:background="@color/Splashscreen"
+                        android:gravity="center"
+                        android:text="@string/service_request"
+                        android:textColor="@color/colorAccent" />
+
+
+                    <TextView
+                        android:id="@+id/tablecol2ID"
+                        android:layout_width="69dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="10"
+                        android:background="@color/Splashscreen"
+                        android:gravity="center"
+                        android:text="@string/qty"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/tablecol3ID"
+                        android:layout_width="69dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:background="@color/Splashscreen"
+                        android:gravity="center"
+                        android:text="@string/amount"
+                        android:textColor="@color/colorAccent" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row1col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row1col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row1col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row2col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row2col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row2col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row3col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row3col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row3col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row4col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row4col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row4col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row5col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row5col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row5col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row6col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row6col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row6col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row7col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row7col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row7col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row8col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row8col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row8col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row9col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row9col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row9col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row10col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row10col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row10col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row11col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row11col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row11col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row12col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row12col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row12col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row13col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row13col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row13col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row14col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row14col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row14col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+                    <EditText
+                        android:id="@+id/row15col1"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="70"
+                        android:ems="10"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/row15col2"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="10"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/row15col3"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="20"
+                        android:ems="10"
+                        android:inputType="number" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+
+
+                    <LinearLayout
+                        android:layout_width="231dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="70"></LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tataltag"
+                        android:layout_width="69dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="10"
+                        android:background="@color/Splashscreen"
+                        android:gravity="center"
+                        android:text="@string/total"
+                        android:textColor="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/Totalamount"
+                        android:layout_width="69dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="20"
+                        android:background="@color/Splashscreen"
+                        android:gravity="center"
+                        android:text="@string/amount"
+                        android:textColor="#6A6A6A" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <EditText
+                android:id="@+id/otherdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:ems="10"
+                android:hint="Other Details ... "
+                android:inputType="textMultiLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="231dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50" />
+
+                <Button
+                    android:id="@+id/clearbtn"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="25"
+                    android:background="#FA3434"
+                    android:clickable="true"
+                    android:text="@string/clear" />
+
+                <Button
+                    android:id="@+id/savebtn"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="25"
+                    android:background="@color/Splashscreen"
+                    android:clickable="true"
+                    android:text="@string/save" />
+
+                <Button
+                    android:id="@+id/removedatabtn"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="25"
+                    android:background="#FA3434"
+                    android:clickable="true"
+                    android:text="Remove" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

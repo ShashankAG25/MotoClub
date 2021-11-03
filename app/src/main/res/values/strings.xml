@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MotoClub</string>
+    <string name="Splash_screen">Splash screen logo</string>
+    <string name="SearchHint">Search register number</string>
+    <string name="searchbar">menusearch</string>
+    <string name="mainenter">Repair Order </string>
+    <string name="bill_no">Bill no..</string>
+    <string name="regnum">Registration number ..</string>
+    <string name="make">Make ..</string>
+    <string name="model">Model ..</string>
+    <string name="engine_no">Engine No ..</string>
+    <string name="odometer_running">Odometer Running ..</string>
+    <string name="owner_name">Owner Name ..</string>
+    <string name="phone">Phone ..</string>
+    <string name="date_in">Date In ..</string>
+    <string name="no">No</string>
+    <string name="service_request">service Request</string>
+    <string name="qty">Qty</string>
+    <string name="amount">Amount</string>
+    <string name="total">Total</string>
+    <string name="clear">Clear</string>
+    <string name="save">Save</string>
+    <string name="search">Search ...</string>
+
+</resources>
